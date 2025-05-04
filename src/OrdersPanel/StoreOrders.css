@@ -1,0 +1,111 @@
+/* עוטף כללי */
+.store-orders-wrapper {
+    padding: 40px 5vw;
+    background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+/* כותרת */
+.store-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #f0f0f0;
+    letter-spacing: 1px;
+}
+
+.orders-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 32px;
+    justify-content: center;
+}
+
+
+.order-card {
+    background-color: #ffffff;
+    color: #222;
+    padding: 24px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 340px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, height 0.3s ease;
+    overflow: hidden;
+}
+
+/* כרטיס פתוח - מאפשר לו לגדול */
+.order-card.expanded {
+    transform: scale(1.02);
+    z-index: 10;
+}
+
+
+.order-card:hover {
+    transform: translateY(-4px);
+}
+
+/* כפתור הצגת מוצרים */
+.toggle-button {
+    margin-top: 10px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.toggle-button:hover {
+    background-color: #ccc;
+}
+
+
+.product-list {
+    margin-top: 12px;
+    list-style: disc inside;
+    padding-left: 0;
+    font-size: 15px;
+}
+
+
+.card-buttons {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ready-btn,
+.reject-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.ready-btn {
+    background-color: #27ae60;
+    color: #fff;
+}
+.ready-btn:hover {
+    background-color: #219653;
+    transform: scale(1.05);
+}
+
+.reject-btn {
+    background-color: #e74c3c;
+    color: #fff;
+}
+.reject-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
