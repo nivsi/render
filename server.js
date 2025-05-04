@@ -4,7 +4,8 @@ import http from 'http';                      // ✅ שלב 1 – מודול htt
 import { Server } from 'socket.io';           // ✅ שלב 1 – socket.io
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
+
 
 app.use(cors());
 app.use(express.json());
